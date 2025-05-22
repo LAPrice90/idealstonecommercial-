@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabre Stone Commercial</title>
+    <title>Ideal Stone Commercial</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    
+    <meta property="og:title" content="Ideal Stone Commercial" />
+    <meta property="og:description" content="At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces." />
+    <meta property="og:image" content="https://idealstonecommercial.co.uk/restaurant-brassbase-landscape.jpg" />
+    <meta property="og:url" content="https://idealstonecommercial.co.uk" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ideal Stone Commercial" />
+    <meta name="twitter:description" content="At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces." />
+    <meta name="twitter:image" content="https://idealstonecommercial.co.uk/restaurant-brassbase-landscape.jpg" />
+    
 </head>
 <body>
 
@@ -54,9 +68,9 @@
         <div class="container">
             <div class="about-content">
                 <h2>Bespoke Tables</h2>
-                <p>At Sabre Stone Commercial, we create bespoke tables from high-quality Laminam Porcelain, designed to elevate the atmosphere of any hotel or restaurant. Our tables are known for their exceptional durability, being both scratch and heat-proof to withstand high-traffic environments. With custom designs tailored to your specific needs, we offer elegant dining tables, stylish bar tops, and unique pieces for lounges and meeting spaces—combining aesthetics with functionality to make a lasting impression.</p>
+                <p>At Ideal Stone Commercial, we create bespoke tables from high-quality Laminam Porcelain, designed to elevate the atmosphere of any hotel or restaurant. Our tables are known for their exceptional durability, being both scratch and heat-proof to withstand high-traffic environments. With custom designs tailored to your specific needs, we offer elegant dining tables, stylish bar tops, and unique pieces for lounges and meeting spaces—combining aesthetics with functionality to make a lasting impression.</p>
                 <p>We work closely with clients from initial consultation through to delivery, ensuring every table is tailored to fit perfectly within its intended space. Using only the finest materials, our tables are crafted to meet the highest standards of durability and design.</p>
-                <p>Our range of edge styles allows you to choose a finish that complements your space, with each design offering a unique look. At Sabre Stone Commercial, our bespoke solutions are all about realizing your design vision with quality and precision.</p>
+                <p>Our range of edge styles allows you to choose a finish that complements your space, with each design offering a unique look. At Ideal Stone Commercial, our bespoke solutions are all about realizing your design vision with quality and precision.</p>
             </div>
             <div class="about-image">
                 <img src="black-gold-table.jpg" alt="Luxury Table Image">
@@ -67,7 +81,6 @@
   
     <section class="colours-section" style="background-color: #ffffff">
         <div class="container">
-            
             <!-- Section Heading -->
             <h2>Stocked Porcelain Colours</h2>
             
@@ -102,8 +115,8 @@
                     <img src="calacatta-black.jpg" alt="Laminam Calacatta Black">
                     <h3>Calacatta Black</h3>
                 </div>
-
-                            <!-- Colour 6 -->
+    
+                <!-- Colour 6 -->
                 <div class="colour-card">
                     <img src="diamond-cream.jpg" alt="Laminam Diamond Cream">
                     <h3>Diamond Cream</h3>
@@ -136,6 +149,7 @@
             
         </div>
     </section>
+    
     
     <!-- Edging Colours Section -->
     <section class="colours-section">
@@ -218,13 +232,14 @@
     
     </div>
 
-    <script src="main.js"></script>
-
     <script>
-        // Use fetch to load the header.html file
         fetch('header.html')
         .then(response => response.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+            highlightActivePage(); // Call to highlight the active page
+        })
+        .catch(error => console.error('Error loading header:', error));
     </script>
 
     <!-- Include the footer -->
@@ -232,8 +247,14 @@
     <script>
         fetch('footer.html')
         .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            initializeSignupForm(); // Call to initialize the signup form after footer is loaded
+        })
+        .catch(error => console.error('Error loading footer:', error));
     </script>
+
+    <script src="main.js"></script>
 
 </body>
 

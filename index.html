@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabre Stone Commercial</title>
+    <title>Ideal Stone Commercial</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+
+    <meta property="og:title" content="Ideal Stone Commercial" />
+    <meta property="og:description" content="At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces." />
+    <meta property="og:image" content="https://idealstonecommercial.co.uk/restaurant-brassbase-landscape.jpg" />
+    <meta property="og:url" content="https://idealstonecommercial.co.uk" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ideal Stone Commercial" />
+    <meta name="twitter:description" content="At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces." />
+    <meta name="twitter:image" content="https://idealstonecommercial.co.uk/restaurant-brassbase-landscape.jpg" />
+
 </head>
 <body>
 
@@ -51,9 +66,9 @@
         <div class="container">
             <div class="about-content">
                 <h2>What We Do</h2>
-                <p>Welcome to Sabre Stone Commercial, a proud extension of Sabre Stone, established in 2006. Known for our craftsmanship and dedication to quality, we specialize in delivering completely bespoke solutions for the commercial and hospitality sectors. Every product we create is tailored to meet our clients' specific needs, from elegant, durable tables crafted from Laminam porcelain to meticulously fabricated worktops and custom wall cladding. At Sabre Stone Commercial, we believe that each project should reflect the unique vision of our customers, combining style and functionality to create exceptional spaces.</p>
+                <p>Welcome to Ideal Stone Commercial, a proud extension of Ideal Stone, established in 2006. Known for our craftsmanship and dedication to quality, we specialize in delivering completely bespoke solutions for the commercial and hospitality sectors. Every product we create is tailored to meet our clients' specific needs, from elegant, durable tables crafted from Laminam porcelain to meticulously fabricated worktops and custom wall cladding. At Ideal Stone Commercial, we believe that each project should reflect the unique vision of our customers, combining style and functionality to create exceptional spaces.</p>
                 <h2>Our Mission</h2>
-                <p>At Sabre Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces. We are committed to combining exceptional craftsmanship with tailored designs, ensuring that each product we deliver meets the specific needs of our clients while embodying elegance, durability, and functionality. We aim to be a trusted partner in transforming visions into reality, one project at a time.</p>
+                <p>At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces. We are committed to combining exceptional craftsmanship with tailored designs, ensuring that each product we deliver meets the specific needs of our clients while embodying elegance, durability, and functionality. We aim to be a trusted partner in transforming visions into reality, one project at a time.</p>
             </div>
             <div class="about-image">
                 <img src="white-base-table.jpg" alt="Luxury Table Image">
@@ -88,7 +103,7 @@
     <!-- 4 Points Section (Reusable 4-box layout) -->
     <section class="section-four-box">
         <div class="container">
-            <h2>Why Sabre Stone Commercial?</h2>
+            <h2>Why Ideal Stone Commercial?</h2>
             <div class="benefits">
                 <div class="benefit">
                     <h3>Custom Solutions</h3>
@@ -121,40 +136,41 @@
     <div class="gallery js-flickity"
     data-flickity='{ "wrapAround": true, "autoPlay": true, "pauseAutoPlayOnHover": false }'>
     
-    <div class="gallery-cell">
-        <img src="car1.jpg" alt="Image 1">
-    </div>
-    <div class="gallery-cell">
-        <img src="car2.jpg" alt="Image 2">
-    </div>
-    <div class="gallery-cell">
-        <img src="car3.jpg" alt="Image 3">
-    </div>
-    <div class="gallery-cell">
-        <img src="car8.jpg" alt="Image 8">
-    </div>
-    <div class="gallery-cell">
-        <img src="car9.jpg" alt="Image 9">
-    </div>
-    <div class="gallery-cell">
-        <img src="car11.jpg" alt="Image 11">
-    </div>
-    <div class="gallery-cell">
-        <img src="car13.jpg" alt="Image 13">
-    </div>
-    <div class="gallery-cell">
-        <img src="car15.jpg" alt="Image 15">
-    </div>
+        <div class="gallery-cell">
+            <img src="car1.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-cell">
+            <img src="car2.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-cell">
+            <img src="car3.jpg" alt="Image 3">
+        </div>
+        <div class="gallery-cell">
+            <img src="car8.jpg" alt="Image 8">
+        </div>
+        <div class="gallery-cell">
+            <img src="car9.jpg" alt="Image 9">
+        </div>
+        <div class="gallery-cell">
+            <img src="car11.jpg" alt="Image 11">
+        </div>
+        <div class="gallery-cell">
+            <img src="car13.jpg" alt="Image 13">
+        </div>
+        <div class="gallery-cell">
+            <img src="car15.jpg" alt="Image 15">
+        </div>
     
     </div>
 
-    <script src="main.js"></script>
-
     <script>
-        // Use fetch to load the header.html file
         fetch('header.html')
         .then(response => response.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+            highlightActivePage(); // Call to highlight the active page
+        })
+        .catch(error => console.error('Error loading header:', error));
     </script>
 
     <!-- Include the footer -->
@@ -162,8 +178,14 @@
     <script>
         fetch('footer.html')
         .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            initializeSignupForm(); // Call to initialize the signup form after footer is loaded
+        })
+        .catch(error => console.error('Error loading footer:', error));
     </script>
+
+    <script src="main.js"></script>
 
 </body>
 

@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabre Stone Commercial</title>
+    <title>Ideal Stone Commercial</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    
+    <meta property="og:title" content="Ideal Stone Commercial" />
+    <meta property="og:description" content="At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces." />
+    <meta property="og:image" content="https://idealstonecommercial.co.uk/restaurant-brassbase-landscape.jpg" />
+    <meta property="og:url" content="https://idealstonecommercial.co.uk" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ideal Stone Commercial" />
+    <meta name="twitter:description" content="At Ideal Stone Commercial, our mission is to create bespoke, high-quality solutions that elevate commercial spaces." />
+    <meta name="twitter:image" content="https://idealstonecommercial.co.uk/restaurant-brassbase-landscape.jpg" />
+    
 </head>
 <body>
 
@@ -22,10 +36,10 @@
     <div class="about-section">
         <div class="container">
             <div class="about-content">
-                <h2>Sabre Stone Commercial</h2>
-                <p>Sabre Stone Commercial, part of Sabre Stone Ltd, specialises in providing bespoke porcelain products to meet the demands of commercial clients. With a reputation for exceptional craftsmanship and innovative design, we offer tailored solutions for the hospitality industry, including high-quality tables and worktops. Our main material, sourced from Laminam, is renowned for its durability and aesthetic appeal, making it ideal for various hospitality environments, from elegant hotel dining areas to sophisticated conference spaces.</p>
-                <p>Located at Home Farm in the Baynards Park Estate, Cranleigh, Surrey, our facility is equipped to fabricate and fit a wide range of products. As we expand into the commercial sector, our experienced team continues to serve the domestic market with expertly crafted worktops. We take pride in delivering outstanding results that blend functionality and style, setting a new standard in both interior and exterior applications.</p>
-                <p>This new venture allows us to continue building on our success while diversifying our offerings to better meet the needs of our commercial clients. Sabre Stone Commercial is dedicated to providing luxurious yet practical solutions that enhance the ambiance of any space, offering unparalleled elegance and quality to the hospitality sector.</p>
+                <h2>Ideal Stone Commercial</h2>
+                <p>Ideal Stone Commercial, a division of Ideal Group, is committed to delivering premium porcelain solutions tailored specifically for the commercial sector across the UK and Ireland. With a focus on excellence in both form and function, we specialise in fabricating bespoke surfaces for hospitality, retail, office, and large-scale residential developments. Our worktops, tabletops, and cladding solutions are crafted to meet the rigorous demands of commercial environments, combining cutting-edge aesthetics with long-term performance.</p> 
+                <p>Operating from our advanced production facility in County Meath, we use state-of-the-art machinery and precision engineering to manufacture custom pieces from industry-leading materials such as Laminam porcelain. Our expert team collaborates closely with architects, designers, and contractors to deliver turnkey surface solutions that meet the exacting standards of modern commercial interiors and exteriors. Every project is approached with a commitment to detail, efficiency, and design integrity.</p> 
+                <p>Ideal Stone Commercial builds on the strong foundation of Ideal Group’s longstanding reputation for quality, innovation, and reliability. As we continue to expand our commercial portfolio, we remain dedicated to setting new benchmarks in surface design and installation. Whether for hotels, restaurants, offices, or high-end retail, we provide elegant, durable, and low-maintenance porcelain solutions that elevate the spaces they serve.</p>
             </div>
             <div class="about-image">
                     <img src="about.jpg" alt="Laminam cladding">
@@ -38,7 +52,7 @@
             <div class="container">
                 <div class="about-content">
                     <h2>Get In Touch</h2>
-                    <p>If you’re ready to elevate your space with bespoke designs tailored to your needs, we’re here to help. At Sabre Stone Commercial, our team of experts is dedicated to providing personalised service and solutions to bring your vision to life. Whether you’re looking for a single piece or a comprehensive project, get in touch with us today to discuss your requirements and explore how we can partner to create something truly exceptional.</p>
+                    <p>If you’re ready to elevate your space with bespoke designs tailored to your needs, we’re here to help. At Ideal Stone Commercial, our team of experts is dedicated to providing personalised service and solutions to bring your vision to life. Whether you’re looking for a single piece or a comprehensive project, get in touch with us today to discuss your requirements and explore how we can partner to create something truly exceptional.</p>
                     <a href="contact.html">
                         <button class="btn">Contact Us Today</button>
                     </a>
@@ -80,13 +94,14 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
-
     <script>
-        // Use fetch to load the header.html file
         fetch('header.html')
         .then(response => response.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+            highlightActivePage(); // Call to highlight the active page
+        })
+        .catch(error => console.error('Error loading header:', error));
     </script>
 
     <!-- Include the footer -->
@@ -94,8 +109,14 @@
     <script>
         fetch('footer.html')
         .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            initializeSignupForm(); // Call to initialize the signup form after footer is loaded
+        })
+        .catch(error => console.error('Error loading footer:', error));
     </script>
+
+    <script src="main.js"></script>
 
 </body>
 
