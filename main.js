@@ -47,6 +47,10 @@ function initializeSignupForm() {
     }
 }
 
+function toggleMenu() {
+  document.querySelector('header').classList.toggle('nav-open');
+}
+
 // Now, the main DOMContentLoaded event
 document.addEventListener('DOMContentLoaded', function () {
     // Fetch and load the header content

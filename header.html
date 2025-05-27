@@ -1,28 +1,29 @@
-    <!-- Header with Logo and Navigation -->
-    <header>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<header>
+  <!-- Desktop headline: Always above nav row -->
+  <div class="company-headline desktop-headline">Ideal Stone Commercial</div>
+  <nav>
+    <div class="nav-row">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo-ideal-white.png" alt="Ideal White Logo" class="logo">
+        </a>
+      </div>
+      <ul class="main-nav">
+        <li><a href="index.html"      id="home-link">Home</a></li>
+        <li><a href="tables.html"     id="tables-link">Tables</a></li>
+        <li><a href="worktops.html"   id="worktops-link">Worktops</a></li>
+        <li><a href="cladding.html"   id="cladding-link">Cladding</a></li>
+        <li><a href="company.html"    id="company-link">Company</a></li>
+        <li><a href="contact.html"    id="contact-link">Contact</a></li>
+      </ul>
+      <div class="nav-spacer"></div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="company-headline mobile-headline">Ideal Stone Commercial</div>
+    </div>
 
-        <div class="top-title">
-            Ideal Stone Commercial
-        </div>
-        
-        <div class="hamburger" onclick="toggleMenu()">
-            <!-- Three horizontal lines for the icon -->
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-
-        <nav>
-            <a href="index.html"><img src="logo-ideal-white.png" alt="Ideal White Logo" class="logo"></a>
-            <ul>
-                <li><a href="index.html" id="home-link">Home</a></li>
-                <li><a href="tables.html" id="tables-link">Tables</a></li>
-                <li><a href="worktops.html" id="worktops-link">Worktops</a></li>
-                <li><a href="cladding.html" id="cladding-link">Cladding</a></li>
-                <li><a href="company.html" id="company-link">Company</a></li>
-                <li><a href="contact.html" id="contact-link">Contact</a></li>
-              </ul>
-        </nav>
-
-    </header>
+  </nav>
+</header>
