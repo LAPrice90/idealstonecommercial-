@@ -814,20 +814,8 @@ footer {
 .contact-info-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 20px;
-}
-
-/* Make both contact columns stretch to fill available height */
-.contact-details,
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-/* (Optional) Ensure the form content centers vertically */
-.contact-form {
-    justify-content: center;
 }
 
 /* Contact Details and Form Widths */
