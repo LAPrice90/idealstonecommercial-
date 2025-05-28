@@ -983,16 +983,19 @@ form p {
 /* Company name styling */
 .company-headline {
   text-align: center;
-  font-size: 1.6em;
+  font-size: 2em;
   color: #ffffff;
   background-color: #1D1D1F;
   padding: 12px 0;
+  margin: 0;
+  font-weight: normal; /* Remove bold */
 }
 
 @media (max-width: 768px) {
   .company-headline {
     text-align: center;
-    font-size: 0.9em; /* reduced from previous value */
+    font-size: 1.2em;  /* Slightly smaller on mobile if desired */
+    font-weight: normal;
     padding: 18px 0 12px 0;
     margin: 0;
     color: #fff;
@@ -1103,11 +1106,12 @@ form p {
 /* === HEADER/NAV FINAL FIX === */
 .company-headline {
   text-align: center;
-  font-size: 1.6em;
+  font-size: 2em;
   color: #fff;
   background: #1D1D1F;
   padding: 12px 0;
   margin: 0;
+  font-weight: normal; /* Remove bold */
 }
 .desktop-headline { display: block; }
 .mobile-headline { display: none; }
@@ -1246,7 +1250,7 @@ header {
   color: #fff;
   text-align: center;
   letter-spacing: 0.01em;
-  font-size: 1.5em;
+  font-size: 2.2em;
   padding: 18px 0 6px 0;
 }
 
@@ -1304,7 +1308,7 @@ header {
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 1.6em;
+    font-size: 1.0em;
     font-weight: 500;
     letter-spacing: 0.01em;
   }
@@ -1352,6 +1356,13 @@ header {
     display: block;
     margin: 0;
     padding: 0;
+  }
+}
+
+/* Force normal font weight for company headline on desktop */
+@media (min-width: 769px) {
+  .company-headline {
+    font-weight: normal !important;
   }
 }
 
